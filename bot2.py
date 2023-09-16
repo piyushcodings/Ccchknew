@@ -5,9 +5,9 @@ from gatet import Tele
 import os
 dollar=50
 GROUP_ID = ['#']
-token = '625524568a3M'
+token = '6628854679:AAG1bSfL_1aaAYIOfgSWkTprl-Yr596C5WQ'
 bot=telebot.TeleBot(token,parse_mode="HTML")
-subscriber =1084525687
+subscriber = 5605747843
 @bot.message_handler(commands=["start"])
 def start(message):
 	found='unpr'
