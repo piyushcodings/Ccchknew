@@ -76,7 +76,7 @@ op = response.get('token')
 with open("data.txt", "w") as file:
     file.write(op)
 
-try:
-    ii = response['validation_feedback']
-except KeyError:
-    return 'success' if 'success' in ii else ii
+ii=response['validation_feedback']
+	except:
+		return 'success'
+	return ii
