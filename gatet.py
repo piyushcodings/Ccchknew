@@ -67,21 +67,16 @@ def Tele(ccx):
 	data = f'token=9704cc35e2fb5a858fb2a6810efe0857c90fd38c&submit=true&loginemail=&loginpassword=&custtype=new&firstname=hhfh&lastname=hhfhmhhfhmdkdk&email=dhjd%40gmail.com&country-calling-code-phonenumber=1&phonenumber=&companyname=&address1=dhhd&address2=gdg&city=hshs&state=&postcode=10080&country=US&password=0)%40R*t%2B%40K%25mD&password2=0)%40R*t%2B%40K%25mD&applycredit=1&paymentmethod=stripe&ccinfo=new&ccdescription=&notes=&payment_method_id={id}'
 	
 	response = requests.post(
-	    'https://clients.asurahosting.com/index.php?rp=/stripe/payment/intent',
-	    cookies=cookies,
-	    headers=headers,
-	    data=data,
-	).json()
-	op=(response.json()['token'])
-	with open("data.txt", "w") as file:
-			file.write(op)
-	try:
-		ii=response['validation_feedback']
-	except:
-		return 'success'
-        if 'Funds' in ii:
-		return 'Funds'
-	elif 'success' in ii:
-		return 'success'
-	else:
-		return ii
+    'https://clients.asurahosting.com/index.php?rp=/stripe/payment/intent',
+    cookies=cookies,
+    headers=headers,
+    data=data,
+).json()
+op = response.get('token')
+with open("data.txt", "w") as file:
+    file.write(op)
+
+try:
+    ii = response['validation_feedback']
+except KeyError:
+    return 'success' if 'success' in ii else ii
