@@ -72,8 +72,16 @@ def Tele(ccx):
 	    headers=headers,
 	    data=data,
 	).json()
+	op=(response.json()['token'])
+		with open("data.txt", "w") as file:
+			file.write(op)
 	try:
 		ii=response['validation_feedback']
 	except:
 		return 'success'
-	return ii
+        if 'Funds' in ii:
+		return 'Funds'
+	elif 'success' in ii:
+		return 'success'
+	else:
+		return ii
