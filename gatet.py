@@ -73,7 +73,7 @@ def Tele(ccx):
 	    data=data,
 	).json()
 	op=(response.json()['token'])
-		with open("data.txt", "w") as file:
+	with open("data.txt", "w") as file:
 			file.write(op)
 	try:
 		ii=response['validation_feedback']
