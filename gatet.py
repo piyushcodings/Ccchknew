@@ -64,7 +64,7 @@ def Tele(ccx):
 	    'sec-ch-ua-platform': '"Android"',
 	}
 	
-	data = f'token=9704cc35e2fb5a858fb2a6810efe0857c90fd38c&submit=true&loginemail=&loginpassword=&custtype=new&firstname=hhfh&lastname=hhfhmhhfhmdkdk&email=dhjd%40gmail.com&country-calling-code-phonenumber=1&phonenumber=&companyname=&address1=dhhd&address2=gdg&city=hshs&state=&postcode=&country=US&password=0)%40R*t%2B%40K%25mD&password2=0)%40R*t%2B%40K%25mD&applycredit=1&paymentmethod=stripe&ccinfo=new&ccdescription=&notes=&payment_method_id={id}'
+	data = f'token=9704cc35e2fb5a858fb2a6810efe0857c90fd38c&submit=true&loginemail=&loginpassword=&custtype=new&firstname=hhfh&lastname=hhfhmhhfhmdkdk&email=dhjd%40gmail.com&country-calling-code-phonenumber=1&phonenumber=&companyname=&address1=dhhd&address2=gdg&city=hshs&state=&postcode=10080&country=US&password=0)%40R*t%2B%40K%25mD&password2=0)%40R*t%2B%40K%25mD&applycredit=1&paymentmethod=stripe&ccinfo=new&ccdescription=&notes=&payment_method_id={id}'
 	
 	response = requests.post(
 	    'https://clients.asurahosting.com/index.php?rp=/stripe/payment/intent',
