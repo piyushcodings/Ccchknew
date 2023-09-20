@@ -72,6 +72,7 @@ def Tele(ccx):
 	    headers=headers,
 	    data=data,
 	).json()
+            print(response)
 	try:
 		ii=response['validation_feedback']
 	except:
