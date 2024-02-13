@@ -267,5 +267,4 @@ def Tele(ccx):
     response = session.post(url, headers=headers, data=data)
     time.sleep(30)
     msg = re.findall(r'<li>(.*?)</li>', response.text, re.DOTALL)
-    print(msg)
     return(msg[0])
