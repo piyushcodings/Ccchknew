@@ -1,4 +1,16 @@
 import requests
+import random
+import string
+import re
+from bs4 import BeautifulSoup
+import json
+import time
+import base64
+from concurrent.futures import ThreadPoolExecutor
+from urllib.parse import unquote
+import cloudscraper
+import os
+from urllib.parse import urlparse, parse_qs
 def Tele(ccx):
 	import requests
 	ccx=ccx.strip()
@@ -10,7 +22,16 @@ def Tele(ccx):
 		yy = yy.split("20")[1]
 	r = requests.session()
 	import requests
+        
+	characters = string.ascii_letters
+        number = string.digits
+        mail = ''.join(random.choice(characters + number) for _ in range(7))
+        email = f"{mail}@gmail.com"
+        name1 = ''.join(random.choice(characters + characters) for _ in range (7))
+        name2 = ''.join(random.choice(characters + characters) for _ in range (7))
+        nombre = name1+ " " + name2
 
+        url = "https://www.frameiteasy.com/"
 	headers = {
 	    'authority': 'api.stripe.com',
 	    'accept': 'application/json',
