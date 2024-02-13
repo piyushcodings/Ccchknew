@@ -1,5 +1,6 @@
 requests
+cloudscraper
 colorama
 flask==2.0.1
-bs4
+beautifulsoup4
 telebot
