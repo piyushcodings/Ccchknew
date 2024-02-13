@@ -27,7 +27,7 @@ def Tele(ccx):
     import requests
     import string
     import random
-
+    session = requests.session()
     characters = string.ascii_letters
     number = string.digits
     mail = "".join(random.choice(characters + number) for _ in range(7))
